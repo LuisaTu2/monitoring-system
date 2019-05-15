@@ -1,0 +1,267 @@
+html, body, #app{
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+    background: linear-gradient(to bottom , rgb(250, 246, 239) 0%, rgb(85, 195, 195) 130%);
+    /* background: linear-gradient(to bottom , rgb(250, 246, 239) 0%, rgb(73, 167, 167) 130%); */
+    font-family: 'Times New Roman', Times, serif;
+    min-width: 768px;
+}
+
+#header, #footer{    
+    /* color: rgb(177, 59, 59); 
+    color: rgb(31, 134, 90);
+    color: rgb(41, 140, 221);*/
+    color: rgb(250, 246, 239);
+}
+
+#header{
+    height: 11%;
+    max-height: 100px;
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 0%;  
+    /* background-color: rgb(21, 151, 151); */
+    background: linear-gradient(to bottom right, rgb(21, 151, 151) 0%, rgb(85, 195, 195) 100%);
+}
+
+#headerTitle{
+    margin: 0%;
+    font-size: 2em;
+    padding-top: 0%;  
+}
+
+#subHeaderTitle{
+    margin: 0%;
+    padding: 0%;
+    font-size: 1.2em;
+}
+
+#footer{
+    height: 3%;
+    max-height: 100px;
+    width: 100%;
+    float: left;
+    text-align: right;
+    padding: 0%;
+    margin: 0%;  
+    color: rgb(10, 73, 73);
+    background: linear-gradient(to top, rgb(141, 199, 199) 0%,  rgb(210, 231, 231) 100%);
+}
+
+#footerText, #footerText a{
+    height:100%;
+    padding-top: 0%;
+    padding-right: 1%;
+    margin: 0%;
+}
+
+#chartsContainer{
+    width: 60%;
+    height: 86%;
+    margin: 0%;
+    padding: 0%;
+    float: left;
+}
+
+#toggleBtnWrapper{
+    height: 6%;
+}
+
+#toggleChartsButton{
+    margin-left: 36%;
+    margin-top: 6%;
+    padding: 0%;
+    height: 40px; 
+    width: 150px;
+    font-size: 14pt;
+    color:  rgb(253, 253, 254);
+    background-color: rgb(93, 167, 228);
+}
+
+#alertTableWrapper{
+    height: 40%;
+    width: 38%;
+    margin: 2% 1% 1% 1%;
+    padding: 0%;
+    float: left;
+    overflow: scroll;
+}
+
+#statsTableWrapper{
+    height: 30%;
+    width: 38%;
+    margin: 1% 1% 2% 1%;
+    padding: 0%;
+    float: left;
+    overflow: scroll;
+}
+
+.c01{
+    text-align: center;
+    background-color: rgb(252, 244, 235, 100);
+    width: 5%;
+    color: rgb(91, 92, 102);
+}
+
+.c02{
+    text-align: left;
+    padding: 0%;
+    margin: 0%;
+    background-color: rgb(252, 244, 235, 100);
+    color: rgb(91, 92, 102);
+}
+
+.tableElement{
+    width: 33%;
+    height: 5%;
+    text-align: center;
+    background-color: rgb(252, 244, 235, 100);
+    color: rgb(91, 92, 102);
+}
+
+.tableElementTime{
+    text-align: left;
+    color: rgb(44, 44, 158);
+}
+
+.tableElementHeader{
+    text-align: center;
+    font-size: 12pt;
+    color:  rgb(253, 253, 254);
+    /* background-color: rgb(70, 184, 64); */
+    background-color: rgb(147, 212, 25);
+    /* background: linear-gradient(to bottom,  rgb(175, 173, 164) 40%, rgb(189, 188, 183)100%); */
+}
+
+.chart {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+#chart2{
+    position: relative;
+    bottom: 100%;
+    left: 0%;
+    visibility: hidden;
+}
+
+#chartsWrapper{
+    width: 80%;
+    height: 70%;
+    margin: 10%;
+    padding: 0%;
+    float: left;
+}
+
+
+/* Fixed size < 768px for optimal chart display */
+@media (max-width: 768px){
+    
+    html, body, #app{
+        width: 100%;
+        height: 120%;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .container {
+        display: flex; 
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    #header{
+        height: 7%;
+        width:100%;
+        float: left;
+        text-align: center;
+        padding: 0%;  
+        /* background-color: rgb(21, 151, 151); */
+        background: linear-gradient(to bottom right, rgb(21, 151, 151) 0%, rgb(85, 195, 195) 100%);
+    }
+
+    #headerTitle{
+        margin: 0%;
+        font-size: 1.5em;
+        padding-top: 1%;     
+    }
+    
+    #subHeaderTitle{
+        margin: 0%;
+        padding-top: 0%;
+        font-size: 1em;
+    }
+
+    #chartsContainer{
+        height: 50%;
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    #chartsWrapper{
+        width: 80%;
+        height: 80%;
+        margin: 8% 10% 0% 10%;
+        padding: 0%;
+        float: left;
+    }
+        
+    #toggleBtnWrapper{
+        height: 5%;
+    }
+
+    #toggleChartsButton{
+        margin-left: 40%;
+        margin-top: 5%;
+        padding: 0%;
+        height: 30px; 
+        width: 100px;
+        font-size: 12pt;
+        color:  rgb(253, 253, 254);
+        background-color: rgb(93, 167, 228);
+    }
+
+    #alertTableWrapper{
+        height: 30%;
+        width: 100%;
+        margin: 2% 0%;
+        padding: 0%;
+        float: left;
+        overflow: scroll;
+    }
+    
+    #statsTableWrapper{
+        height: 30%;
+        width: 100%;
+        margin: 2% 0%;
+        padding: 0%;
+        float: left;
+        overflow: scroll;
+    }
+
+    #footer{
+        height: 3%;
+        width: 100%;
+        float: left;
+        text-align: right;
+        padding: 0%;
+        margin: 0%;  
+        color: rgb(10, 73, 73);
+        background: linear-gradient(to top, rgb(141, 199, 199) 0%,  rgb(210, 231, 231) 100%);
+    }
+
+    #footerText, #footerText a{
+        height:100%;
+        padding-top:1%;
+        padding-right: 8%;
+        margin: 0%;
+        color: rgb(207, 75, 247);
+    }
+}
