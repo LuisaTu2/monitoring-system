@@ -1,4 +1,6 @@
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 // const checkLevels = require("./functions/invalidChlorineLevels.js");
+const toggleCharts = require("./modules/toggleCharts.js");
 
 window.onload = function(){ 
 
@@ -199,7 +201,7 @@ window.onload = function(){
         return chlorineLevel
     } // end of Invalid Chlorine Levels function
     
-
+// /*
     function toggleCharts(e){
         console.log("Toggle charts.", e.target.value);
         let chart1 = document.getElementById("chart1");
@@ -215,7 +217,7 @@ window.onload = function(){
             toggleChartsBtn.value = "c1"
         }
     } // end of toggleCharts function
-
+// */
 
     function stats( count24H, countHist, cntAnomalous, cntOOB, cntNull, chlorineHist){
 
@@ -257,3 +259,23 @@ window.onload = function(){
     } // end of stats function
 
 } // end of window.onload
+
+},{"./modules/toggleCharts.js":2}],2:[function(require,module,exports){
+function toggleCharts(e){
+    console.log("Toggle charts.", e.target.value);
+    let chart1 = document.getElementById("chart1");
+    let chart2 = document.getElementById("chart2");
+
+    if(e.target.value === "c1"){
+        chart1.style.visiblity = "hidden"
+        chart2.style.visibility = "visible"
+        toggleChartsBtn.value = "c2"
+    } else {
+        chart1.style.visiblity = "visible"
+        chart2.style.visibility = "hidden"
+        toggleChartsBtn.value = "c1"
+    }
+} // end of toggleCharts function
+
+module.exports = toggleCharts;
+},{}]},{},[1]);

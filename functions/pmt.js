@@ -1,7 +1,7 @@
 const moment = require("moment");
 
 let pmt = function (m) {
-    console.log(`Generating data for ${moment}`);
+    // console.log(`Generating data for ${m}`);
     // Convert timestamp if moment object is not an instance of Moment.js
     let ts = moment.isMoment(m) ? m.format() : "";
     let n = Math.random() <= .05 ? xqa() : xda();

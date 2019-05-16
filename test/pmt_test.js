@@ -5,7 +5,7 @@ let assert = require('chai').assert;
 
 describe('#pmt()', function() {
 
-    context("With null, undefined or empty strings", function() {
+    context("With argument as an empty string", function() {
         it("should return an object", function() {
         assert.isObject( pmt(""), "it returns an Object")
         })

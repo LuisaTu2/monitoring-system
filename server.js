@@ -82,29 +82,3 @@ ukj = ( (e) => {
         }
         return t}
 );
-
-
-/*
-pmt = ( e => { 
-        console.log(`Generating data for ${e}`);
-        // console.log("E: ", e);
-        let n = 0;
-        const t = {
-            orgName:"Community Pool",
-            orgID:7,
-            sensorName:"Chlorine Level",
-            sensorID:21,
-            timestamp:e.format(),
-            value: n = Math.random() <= .05 ? xqa() : xda()
-        }; //end of t
-        // console.log("pmt t: ",t)
-        return t
-        // return console.log(t),t
-    }
-    ); //end of pmt
-
-    
-xda = ( () => eki(1,3) );
-xqa = ( () => {  return Math.random() <= .25 ? null : eki(0, 1e3) } );
-eki = ( (e,n) => Math.random() * (n-e) + e );
-*/
