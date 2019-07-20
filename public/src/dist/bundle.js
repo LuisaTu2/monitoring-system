@@ -23,7 +23,9 @@ window.onload = function(){
     
     /* **********************************************************************
                     Create WebSocket & Connection Handlers
-    ********************************************************************** */
+    ********************************************************************** */        
+//    <div id="header"  >
+
     const socket = new WebSocket('ws://localhost:8080');
 
     socket.onopen = () => {
@@ -110,7 +112,7 @@ window.onload = function(){
             let chlorineValue = d.value;
 
             if(d.value < 1 || d.value > 3 || d.value === null) {
-                alert("Anomalous chlorine level recorded!");
+                // alert("Anomalous chlorine level recorded!");
                 countAnomalous++;
                 chlorineValue = invalidChlorineLevels(d);
             }

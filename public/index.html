@@ -5,88 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Chlorine Monitoring System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap-->
-    <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
 <body>
   
-    <div id="app" class="container" >
+    <div id="app" >
 
-        <div id="header" class="flex-item">
-                <p id="headerTitle">  Chlorine Monitoring System  </p> 
-                <p id="subHeaderTitle">   </p> 
+        <div id="header" class="text-center">
+                <p id="headerTitle" >  Concentration Monitoring System  </p> 
+                <p id="subHeaderTitle" >  </p> 
         </div>
 
+        <div id="content" >
+            <div id="chartsContainer" >
+                <div id="toggleBtnWrapper">
+                    <button id="toggleChartsButton" value="c1" class="btn btn-default">Toggle Charts</button>
+                </div>
+                <div id="chartsWrapper">
+                    <div id="chart1" class="chart"></div>
+                    <div id="chart2" class="chart"></div>
+                </div>
+            </div>      
 
-        <div id="chartsContainer" class="flex-item">
-            <div id="toggleBtnWrapper">
-                <button id="toggleChartsButton" value="c1"  class="btn btn-default">Toggle Charts</button>
-            </div>
-            <div id="chartsWrapper">
-                <div id="chart1" class="chart"></div>
-                <div id="chart2" class="chart"></div>
-            </div>
-        </div>      
+            <div id="tablesContainer" >
+                <div id="alertTableWrapper" >
+                    <table id="alertTable" class="table table-striped table-bordered table-hover table-condensed .table-responsive">
+                        <thead>
+                            <td class="tableElementHeader"></td>
+                            <td class="tableElementHeader">Date</td>
+                            <td class="tableElementHeader">Time</td>
+                            <td class="tableElementHeader">Anomalous Levels (ppm)</td>
+                        </thead>
+                    </table>
+                </div>
 
-        <div id="alertTableWrapper" class="flex-item">
-            <table id="alertTable" class="table table-striped table-bordered table-hover table-condensed .table-responsive">
-                <thead>
-                    <td class="tableElementHeader"></td>
-                    <td class="tableElementHeader">Date</td>
-                    <td class="tableElementHeader">Time</td>
-                    <td class="tableElementHeader">Anomalous Chlorine Levels (ppm)</td>
-                </thead>
-            </table>
+                <div id="statsTableWrapper" class="flex-item">
+                    <table id="statsTable" class="table table-bordered table-hover table-condensed .table-responsive">
+                        <thead>
+                            <tr>
+                                <td class="tableElementHeader">  </td>
+                                <td class="tableElementHeader"> Last 24 Hours </td>
+                                <td class="tableElementHeader"> Historical </td>
+                            </tr>
+                        </thead>
+                        <tr id="statsR1">
+                            <td id="statsR1E0" class="c02"> Total Records Count </td>
+                            <td id="statsR1E1" class="tableElement">  </td>
+                            <td id="statsR1E2" class="tableElement"> </td>
+                        </tr>
+                        <tr id="statsR2">
+                            <td id="statsR2E0" class="c02"> Avg Levels (ppm) </td>
+                            <td id="statsR2E1" class="tableElement">  </td>
+                            <td id="statsR2E2" class="tableElement"> </td>
+                        </tr>
+                        <tr id="statsR3">
+                            <td id="statsR3E0" class="c02"> Total Anomalous Records Count  </td>
+                            <td id="statsR3E1" class="tableElement"> </td>
+                            <td id="statsR3E2" class="tableElement"> </td>
+                        </tr>
+                        <tr id="statsR4">
+                            <td id="statsR4E0" class="c02"> Total Out of Bound Record Count  </td>
+                            <td id="statsR4E1" class="tableElement"> </td>
+                            <td id="statsR4E2" class="tableElement"> </td>
+                        </tr>
+                        <tr id="statsR5">
+                            <td id="statsR5E0" class="c02"> Total Null Records Count  </td>
+                            <td id="statsR5E1" class="tableElement"> </td>
+                            <td id="statsR5E2" class="tableElement"> </td>
+                        </tr>
+                        <tr id="statsR6">
+                            <td id="statsR6E0" class="c02"> Percentage Anomalous Records </td>
+                            <td id="statsR6E1" class="tableElement"> </td>
+                            <td id="statsR6E2" class="tableElement"> </td>
+                        </tr>
+                        <tr id="statsR7">
+                            <td id="statsR7E0" class="c02"> Maximum Level </td>
+                            <td id="statsR7E1" class="tableElement"> </td>
+                            <td id="statsR7E2" class="tableElement"> </td>
+                        </tr>
+                    </table>
+                </div> <!-- end of statsTableWrapper -->
+            </div>
         </div>
-
-        <div id="statsTableWrapper" class="flex-item">
-            <table id="statsTable" class="table table-bordered table-hover table-condensed .table-responsive">
-                <thead>
-                    <tr>
-                        <td class="tableElementHeader">  </td>
-                        <td class="tableElementHeader"> Last 24 Hours </td>
-                        <td class="tableElementHeader"> Historical </td>
-                    </tr>
-                </thead>
-                <tr id="statsR1">
-                    <td id="statsR1E0" class="c02"> Total Records Count </td>
-                    <td id="statsR1E1" class="tableElement">  </td>
-                    <td id="statsR1E2" class="tableElement"> </td>
-                </tr>
-                <tr id="statsR2">
-                    <td id="statsR2E0" class="c02"> Avg Chlorine Levels (ppm) </td>
-                    <td id="statsR2E1" class="tableElement">  </td>
-                    <td id="statsR2E2" class="tableElement"> </td>
-                </tr>
-                <tr id="statsR3">
-                    <td id="statsR3E0" class="c02"> Total Anomalous Records Count  </td>
-                    <td id="statsR3E1" class="tableElement"> </td>
-                    <td id="statsR3E2" class="tableElement"> </td>
-                </tr>
-                <tr id="statsR4">
-                    <td id="statsR4E0" class="c02"> Total Out of Bound Chlorine Levels Record Count  </td>
-                    <td id="statsR4E1" class="tableElement"> </td>
-                    <td id="statsR4E2" class="tableElement"> </td>
-                </tr>
-                <tr id="statsR5">
-                    <td id="statsR5E0" class="c02"> Total Null Records Count  </td>
-                    <td id="statsR5E1" class="tableElement"> </td>
-                    <td id="statsR5E2" class="tableElement"> </td>
-                </tr>
-                <tr id="statsR6">
-                    <td id="statsR6E0" class="c02"> Percentage Anomalous Records </td>
-                    <td id="statsR6E1" class="tableElement"> </td>
-                    <td id="statsR6E2" class="tableElement"> </td>
-                </tr>
-                <tr id="statsR7">
-                    <td id="statsR7E0" class="c02"> Maximum Chlorine Level </td>
-                    <td id="statsR7E1" class="tableElement"> </td>
-                    <td id="statsR7E2" class="tableElement"> </td>
-                </tr>
-            </table>
-        </div> <!-- end of statsTableWrapper -->
 
         <div id="footer" class="flex-item">
             <p id="footerText"> Created by <strong> <a href="https://www.linkedin.com/in/luisa-pegoraro-1a53252b/"> LuisaTu2 </a>  </strong> </p>
@@ -97,6 +99,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
     <!-- <script src="src/main.js"></script> -->
     <script src="src/dist/bundle.js"></script>
 </body>

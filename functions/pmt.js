@@ -6,7 +6,7 @@ let pmt = function (m) {
     let ts = moment.isMoment(m) ? m.format() : "";
     let n = Math.random() <= .05 ? xqa() : xda();
     const data = {
-        orgName: "Windsor Community Pool",
+        orgName: "Community Pool",
         orgID: 7, 
         sensorName: "Chlorine Level",
         sensorID: 21,

@@ -23,7 +23,7 @@ function invalidChlorineLevels(d){
     newTime.innerHTML = d.timestamp.substring(11,19);
     newValue.innerHTML = chlorineLevelLabel;
 
-    newCount.setAttribute("class", "c01");
+    newCount.setAttribute("class", "c01 tableElement");
     newDate.setAttribute("class", "tableElement");
     newTime.setAttribute("class", "tableElement");
     newValue.setAttribute("class", "tableElement");
