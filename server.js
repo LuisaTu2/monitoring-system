@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
-const expressport = 3000;
+// const expressport = 3000;
+const expressport =  process.env.PORT || 3000;
 const wsport = 8080;
 let getting24HData = false;
 let pmt = require("./functions/pmt");
