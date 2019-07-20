@@ -8,8 +8,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "start": "node server.js",
-    "build": "webpack public/main.js"
+    "start": "node server.js"
   },
   "author": "@LuisaTu2",
   "license": "ISC",
