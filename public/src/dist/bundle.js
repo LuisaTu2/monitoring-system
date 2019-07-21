@@ -26,7 +26,7 @@ window.onload = function(){
     ********************************************************************** */        
 //    <div id="header"  >
 
-    const socket = new WebSocket('ws://localhost:8080');
+    const socket = new WebSocket('ws://localhost:3000');
 
     socket.onopen = () => {
         socket.send("\n*****\nWebsocket connection opened!\n*****");
