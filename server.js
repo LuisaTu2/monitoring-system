@@ -10,7 +10,7 @@ const pmt = require("./functions/pmt");
 app.use(express.static('public'));
 
 const server = http.createServer(app);
-server.listen(expressport);
+// server.listen(expressport);
 
 app.get('/', function (req, res) {
     res.send("index.html");
