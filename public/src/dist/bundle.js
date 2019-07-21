@@ -25,8 +25,10 @@ window.onload = function(){
                     Create WebSocket & Connection Handlers
     ********************************************************************** */        
 //    <div id="header"  >
-
-    const socket = new WebSocket('ws://localhost:3000');
+    const host = location.origin.replace(/^http/, 'ws');
+    console.log("HOST with replacement", host);
+    // const socket = new WebSocket('ws://localhost:3000');
+    const socket = new WebSocket(host);
 
     socket.onopen = () => {
         socket.send("\n*****\nWebsocket connection opened!\n*****");
