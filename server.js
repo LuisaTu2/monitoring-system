@@ -10,7 +10,6 @@ const pmt = require("./functions/pmt");
 app.use(express.static('public'));
 
 const server = http.createServer(app);
-// server.listen(expressport);
 
 app.get('/', function (req, res) {
     res.send("index.html");
@@ -25,12 +24,9 @@ server.listen(expressport, function () {
             Websocket Setup 
    *********************************** */
 const moment = require("moment");
-const WebSocket = require('ws');
-var WebSocketServer = require("ws").Server
-// const wss = new WebSocket.Server({ port: wsport });
+const WebSocketServer = require("ws").Server
 var wss = new WebSocketServer({server: server})
 console.log("websocket server created")
-// console.log("Websocket is listening on port: ", wsport,".");
 let interval;
 
 wss.on("connection", function(e){ 

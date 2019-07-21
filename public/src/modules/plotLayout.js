@@ -1,6 +1,6 @@
 let layout = {
     title: {
-        text: "Chlorine Levels - ",
+        text: "Concentration Levels - ",
         font: {
             size: 18,
             color: "rgba(80, 107, 165, 1)"
@@ -10,13 +10,16 @@ let layout = {
         title: {
           type: "date", 
           font: {
-              size: 12
+              size: 50
           }
         },
       },
     yaxis: {
         title: {
-            text: "Chlorine Levels (ppm)",
+            text: "Concentration Levels (ppm)",
+            font: {
+                size: 50
+            }
         }
     }
 }

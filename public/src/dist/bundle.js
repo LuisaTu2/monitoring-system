@@ -69,23 +69,18 @@ window.onload = function(){
             // Creating plots
             let layout = {
                 title: {
-                    text: "Chlorine Levels - ",
+                    text: "Concentration Levels - ",
                     font: {
-                        size: 18,
+                        size: 24,
                         color: "rgba(80, 107, 165, 1)"
                     }
                     },
-                xaxis: {
-                    title: {
-                      type: "date", 
-                      font: {
-                          size: 12
-                      }
-                    },
-                  },
                 yaxis: {
                     title: {
-                        text: "Chlorine Levels (ppm)",
+                        text: "Concentration Levels (ppm)",
+                        font: {
+                            size: 20
+                        }
                     }
                 }
             }
@@ -135,7 +130,10 @@ window.onload = function(){
                     xaxis: {
                         range: [x_time[0], d.timestamp],
                         title: {
-                            text: "Time"
+                            text: "Time",
+                            font:{
+                                size: 20
+                            }
                         }
                     }
                 }) // end of Plotly.relayout               
@@ -151,7 +149,10 @@ window.onload = function(){
                 xaxis: {
                     range: [x_time[count-initialDataLength], d.timestamp],
                     title: {
-                        text: "Time"
+                        text: "Time", 
+                        font:{
+                            size: 20
+                        }
                     }
                 }
             }) // end of Plotly.relayout    
