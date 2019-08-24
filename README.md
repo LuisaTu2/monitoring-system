@@ -15,4 +15,4 @@ Concentration monitoring system via websockets.
 
 First page rendering is displayed below:
 
-![Monitoring System - Welcome Page](first-page.png)
+![Monitoring System - Welcome Page](first-page.JPG)
