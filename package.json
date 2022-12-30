@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "mocha": "^6.1.4",
+    "mocha": "^10.2.0",
     "moment": "^2.24.0",
     "ws": "^6.1.3"
   },
